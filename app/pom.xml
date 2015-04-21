@@ -16,6 +16,7 @@
         <module>dal</module>
         <module>biz</module>
         <module>base</module>
+        <module>test</module>
     </modules>
 
 

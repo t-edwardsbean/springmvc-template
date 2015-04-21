@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE generatorConfiguration
-  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
     <properties resource="config.properties" />
@@ -13,7 +13,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="${jdbc.driver}"
-            connectionURL="${jdbc.url}" userId="${jdbc.user}" password="${jdbc.password}">
+                        connectionURL="${jdbc.url}" userId="${jdbc.user}" password="${jdbc.password}">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -21,23 +21,23 @@
         </javaTypeResolver>
 
         <javaModelGenerator targetPackage="${target.model.package}"
-            targetProject="../src/main/java">
+                            targetProject="../app/dal/src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="${target.model.package}"
-            targetProject="../src/main/resources/META-INF/mappers/auto">
+                         targetProject="../app/dal/src/main/resources/META-INF/mappers/auto">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="XMLMAPPER" 
-            targetPackage="${target.client.package}" 
-            targetProject="../src/main/java">
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="${target.client.package}"
+                             targetProject="../app/dal/src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
         <!-- add your table below -->
-        <table tableName="city" domainObjectName="City" />
+        <table tableName="game_phone" domainObjectName="Phone" />
     </context>
 </generatorConfiguration>

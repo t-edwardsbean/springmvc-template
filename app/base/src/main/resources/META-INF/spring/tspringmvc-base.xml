@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.edwardsbean.tspringmvc">
+        <context:exclude-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
+        <context:exclude-filter expression="org.springframework.web.bind.annotation.ControllerAdvice" type="annotation"/>
+    </context:component-scan>
+	
+	<!--<context:property-placeholder location="classpath:tspringmvc-app-config.properties" order="1" ignore-unresolvable="true"/>-->
+
+	<!--<bean id="jvmStatCollector" class="com.edwardsbean.timo.util.log.stat.JvmStatCollector" init-method="start" />-->
+	<!--<bean id="osStatCollector" class="com.edwardsbean.timo.util.log.stat.OsStatCollector" init-method="start" />-->
+
+	<!--<bean id="dalDigestLogInterceptor" class="com.edwardsbean.timo.util.log.digest.BasicDigestLogInterceptor" c:loggerName="DAL-DIGEST-LOGGER" p:printArguments="${demo.logs.digest.dal.arguments}" />-->
+	<!--<bean id="salDigestLogInterceptor" class="com.edwardsbean.timo.util.log.digest.BasicDigestLogInterceptor" c:loggerName="SAL-DIGEST-LOGGER" p:printArguments="${demo.logs.digest.sal.arguments}" p:printResults="${demo.logs.digest.sal.results}" />-->
+	
+	<!--<aop:config>-->
+		<!--<aop:advisor advice-ref="dalDigestLogInterceptor" pointcut="within(com.edwardsbean.tspringmvc.dal.dao..*)"/>-->
+		<!--<aop:advisor advice-ref="salDigestLogInterceptor" pointcut="within(com.edwardsbean.tspringmvc.service.integration..*)"/>-->
+	<!--</aop:config>-->
+	
+</beans>

@@ -38,11 +38,9 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <groupId>com.edwardsbean</groupId>
+            <artifactId>tspringmvc-base</artifactId>
         </dependency>
     </dependencies>
 

@@ -8,22 +8,22 @@
 
 	<mvc:annotation-driven/>
 
-	<!--<mvc:interceptors>-->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.edwardsbean.timo.log.LogInterceptor"/>
+		</mvc:interceptor>
 		<!--<mvc:interceptor>-->
 			<!--<mvc:mapping path="/**"/>-->
-			<!--<bean class="com.springapp.interceptor.LogInterceptor"/>-->
+			<!--<bean class="com.edwardsbean.timo.security.AuthInterceptor"/>-->
 		<!--</mvc:interceptor>-->
-		<!--<mvc:interceptor>-->
-			<!--<mvc:mapping path="/**"/>-->
-			<!--<bean class="com.springapp.interceptor.AuthInterceptor"/>-->
-		<!--</mvc:interceptor>-->
-	<!--</mvc:interceptors>-->
+	</mvc:interceptors>
 
 	<!--<mvc:resources mapping="/**" location="/swagger-resource/" />-->
 
-	<!--<bean class="com.springapp.MySwaggerConfig"/>-->
+	<!--<bean class="com.edwardsbean.timo.swagger.SwaggerConfig"/>-->
 
-	<!--<bean class="com.springapp.exception.CustomHandlerExceptionResolver" id="customHandlerExceptionResolver"/>-->
+	<bean class="com.edwardsbean.timo.service.exception.CustomHandlerExceptionResolver" id="customHandlerExceptionResolver"/>
 
 
 	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
@@ -31,6 +31,6 @@
 	<!--<property name="suffix" value=".jsp" />-->
 	<!--</bean>-->
 
-	<context:component-scan base-package="com.springapp.controller"/>
+	<context:component-scan base-package="com.edwardsbean.tspringmvc"/>
 
 </beans>
