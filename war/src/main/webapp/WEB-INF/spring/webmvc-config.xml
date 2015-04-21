@@ -2,6 +2,7 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:context="http://www.springframework.org/schema/context"
 	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
@@ -19,9 +20,9 @@
 		<!--</mvc:interceptor>-->
 	</mvc:interceptors>
 
-	<!--<mvc:resources mapping="/**" location="/swagger-resource/" />-->
+	<mvc:resources mapping="/**" location="/swagger-resource/" />
 
-	<!--<bean class="com.edwardsbean.timo.swagger.SwaggerConfig"/>-->
+	<bean class="com.edwardsbean.timo.swagger.SwaggerConfig" p:projectName="tspringmvc" p:email="edwardsbean@gmail.com" p:projectDescription="tspringmvc在线文档，用于测试接口"/>
 
 	<bean class="com.edwardsbean.timo.service.exception.CustomHandlerExceptionResolver" id="customHandlerExceptionResolver"/>
 
