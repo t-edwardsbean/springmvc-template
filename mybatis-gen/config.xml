@@ -38,6 +38,6 @@
         </javaClientGenerator>
 
         <!-- add your table below -->
-        <table tableName="game_phone" domainObjectName="Phone" />
+        <table tableName="tspringmvc_phone" domainObjectName="Phone" />
     </context>
 </generatorConfiguration>
