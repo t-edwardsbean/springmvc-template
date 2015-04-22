@@ -32,4 +32,9 @@ public class PhoneDaoTest {
         phone.setContent("this i2s a content");
         mapper.insert(phone);
     }
+
+    @Test
+    public void testMapperSelect() throws Exception {
+        System.out.println(mapper.selectByPrimaryKey(1L));
+    }
 }

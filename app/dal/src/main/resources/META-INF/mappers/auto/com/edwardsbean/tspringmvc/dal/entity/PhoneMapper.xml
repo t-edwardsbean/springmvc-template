@@ -72,7 +72,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from game_phone
+    from tspringmvc_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -83,17 +83,17 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from game_phone
+    from tspringmvc_phone
     where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from game_phone
+    delete from tspringmvc_phone
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <select id="selectByExampleWithPaging" resultMap="BaseResultMap" parameterType="com.edwardsbean.tspringmvc.dal.entity.PhoneExample" >
     select
     <include refid="Base_Column_List" />
-    from game_phone
+    from tspringmvc_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -103,17 +103,17 @@
     limit ${startIndex},${pageSize}
   </select>
   <delete id="deleteByExample" parameterType="com.edwardsbean.tspringmvc.dal.entity.PhoneExample" >
-    delete from game_phone
+    delete from tspringmvc_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
   <insert id="insert" parameterType="com.edwardsbean.tspringmvc.dal.entity.Phone" >
-    insert into game_phone (id, content)
+    insert into tspringmvc_phone (id, content)
     values (#{id,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.edwardsbean.tspringmvc.dal.entity.Phone" >
-    insert into game_phone
+    insert into tspringmvc_phone
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -132,13 +132,13 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.edwardsbean.tspringmvc.dal.entity.PhoneExample" resultType="java.lang.Integer" >
-    select count(*) from game_phone
+    select count(*) from tspringmvc_phone
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update game_phone
+    update tspringmvc_phone
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=BIGINT},
@@ -152,7 +152,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update game_phone
+    update tspringmvc_phone
     set id = #{record.id,jdbcType=BIGINT},
       content = #{record.content,jdbcType=VARCHAR}
     <if test="_parameter != null" >
@@ -160,7 +160,7 @@
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.edwardsbean.tspringmvc.dal.entity.Phone" >
-    update game_phone
+    update tspringmvc_phone
     <set >
       <if test="content != null" >
         content = #{content,jdbcType=VARCHAR},
@@ -169,7 +169,7 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.edwardsbean.tspringmvc.dal.entity.Phone" >
-    update game_phone
+    update tspringmvc_phone
     set content = #{content,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
