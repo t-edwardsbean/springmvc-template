@@ -22,7 +22,7 @@ public class Phone {
     }
 
     @Override
-         public String toString() {
+    public String toString() {
         return "Phone{" +
                 "id=" + id +
                 ", content='" + content + '\'' +
